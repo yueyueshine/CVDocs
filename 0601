@@ -1,0 +1,26 @@
+计算机视觉概览
+目标检测三大开源神器　Detectron2/mmdetection/SimpleDet
+Detectron2 安装中
+
+NAS(Neural Architecture Search)
+使用强化学习学习一个CNN RNN （NAS-CNN NAS-RNN）
+最大化网络在验证集上的精度期望来优化网络　CNN -CIFAR-10(优于DenseNet2) RNN - Treeank(优于LSTM)
+CNN 用强化学习寻找图像分类网络的卷积部分（表示层）RNN？（一个类似LSTM的cell）
+现在的神经网络一般采用堆叠的block方式搭建而成，这些堆叠的参数可以用一个序列来表示？
+NAS会使用一个RNN构成的控制器，以概率p随机采样一个网络结构Ａ，然后在-CIFAR-10数据集训练这个网络，并得到验证集上的精度Ｒ,然后使用Ｒ更新控制器参数，
+如此循环直到模型收敛。
+速度太慢
+完整的网络结构是需要手动设计的，NAS学习的是基础网络中重复的，被堆叠的单元。
+主要学习的单元有两种：
+1 NormalCell 输入和输出特征图尺寸相同
+2 Reduction Cell 输出Feature Map 对输入Feature Map 进行了一次降采样
+
+
+
+
+Attentation
+
+
+目标检测性能最强
+2019 anchor-free FCOS CenterNet
+
